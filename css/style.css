@@ -1,0 +1,480 @@
+@font-face {
+  font-family: 'Muller';
+  src: url('../fonts/MullerMedium.woff2') format('woff2'),
+    url('../fonts/MullerMedium.woff') format('woff');
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('../fonts/MullerRegular.woff2') format('woff2'),
+    url('../fonts/MullerRegular.woff') format('woff');
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('../fonts/MullerBold.woff2') format('woff2'),
+    url('../fonts/MullerBold.woff') format('woff');
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('../fonts/MullerLight.woff2') format('woff2'),
+    url('../fonts/MullerLight.woff') format('woff');
+  font-display: swap;
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Muller', sans-serif;
+  background-color: #f1f1f1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-headers {
+  margin-top: 0;
+  margin-left: 40px;
+  font-size: 40px;
+  line-height: 32px;
+  color: #333333;
+  font-weight: 400;
+}
+
+/* Header */
+
+.container-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  font-weight: normal;
+}
+
+.container-header-top strong:nth-child(2) {
+  flex-grow: 1;
+}
+
+.logo-img {
+  width: 260px;
+  height: 55px;
+  margin-right: 25px;
+}
+
+.container-header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.header-phone-link {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 600;
+  color: #666666;
+}
+
+.fa-arrow-circle-right {
+  color: #cc9933;
+}
+
+.header-personal-account {
+  color: #cc9933;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.header-nav-list {
+  display: flex;
+}
+
+.header-nav-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-nav-item-link {
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+}
+
+.header-search {
+  position: relative;
+  width: 350px;
+  height: 50px;
+}
+
+.header-search input {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  border: none;
+}
+
+.header-search-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url('/img/search.png');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Articles: quick-booking and special-offer */
+
+.quick-booking-special-offer {
+  padding-top: 70px;
+}
+
+.quick-booking-header,
+.special-offer-header {
+  margin-bottom: 20px;
+}
+
+.container-articles {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.container-quick-booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 55px;
+}
+
+.quick-booking-input {
+  min-width: 515px;
+  height: 70px;
+  margin-bottom: 24px;
+  border: none;
+  border-radius: 12px;
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+.quick-booking-link {
+  min-width: 160px;
+  min-height: 70px;
+  margin-right: 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: #cc9933;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.quick-booking-total-offers-link {
+  color: #cc9933;
+}
+
+.background-special-offer {
+  width: 595px;
+  height: 540px;
+  background: url('/img/spec-offer.jpg') no-repeat center center;
+  padding: 265px 0px 40px 40px;
+  align-content: flex-end;
+}
+
+.special-offer-category {
+  margin-top: 0;
+  margin-bottom: 40px;
+  max-width: 315px;
+  font-size: 66px;
+  line-height: 58px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.special-offer-price {
+  font-size: 35px;
+  line-height: 32px;
+  color: #858381;
+  margin-right: 40px;
+  transform: translateY(-3px);
+}
+
+.special-offer-detailed {
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffcc66;
+  background: url('/img/arrow-special-offer.svg') no-repeat center right;
+  padding-right: 15px;
+}
+
+.special-offer-info {
+  display: flex;
+  align-items: center;
+}
+
+/* About us */
+
+.container-about-us {
+  margin-top: 65px;
+}
+
+.about-us-header {
+  margin-bottom: 20px;
+}
+
+.about-us-description {
+  margin-left: 40px;
+  margin-bottom: 0;
+  max-width: 885px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #797979;
+}
+
+/* Services */
+
+.container-services {
+  margin-top: 65px;
+}
+
+.services-header {
+  margin-bottom: 0;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-item {
+  min-width: 570px;
+  min-height: 325px;
+  flex: 0 0 49%;
+  margin-top: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.services-item:not(:nth-child(2n)) {
+  margin-right: 23px;
+}
+
+.services-item-descriptions {
+  max-width: 400px;
+}
+
+.services-item-img {
+  width: 100%;
+  height: 50%;
+  display: block;
+  transform: translateX(0.5px);
+  margin-bottom: 35px;
+}
+
+.services-item-img-champagne {
+  background: url('/img/champagne.png') no-repeat;
+}
+
+.services-item-img-table {
+  background: url('/img/table.png') no-repeat;
+}
+
+.services-item-img-swimpool {
+  background: url('/img/swimpool.png') no-repeat;
+}
+
+.services-item-img-cars {
+  background: url('/img/cars.png') top center no-repeat;
+}
+
+.services-item-link {
+  background: url('/img/arrow.svg') no-repeat right;
+  padding-left: 30px;
+  padding-right: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: #cc9933;
+}
+
+.services-item-descriptions {
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+  min-width: 425px;
+  margin-bottom: 30px;
+}
+/* Advantages */
+
+.container-advantages {
+  margin-top: 65px;
+}
+
+.advantages-header {
+  margin-bottom: 0;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item {
+  min-width: 275px;
+  min-height: 275px;
+  flex: 0 0 23%;
+  margin-top: 23px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 44px 0px 0px 44px;
+}
+
+.advantages-item:not(:nth-child(4n)) {
+  margin-right: 23px;
+}
+
+.advantages-item-description {
+  max-width: 188px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #333333;
+}
+
+/* Accommodation */
+
+.container-accommodation {
+  margin-top: 68px;
+}
+
+.accommodation-header {
+  margin-bottom: 0;
+}
+
+.accommodation-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accommodation-item {
+  flex: 0 0 30%;
+  margin-top: 25px;
+  min-width: 373px;
+  min-height: 440px;
+  background-color: #ffffff;
+  border-radius: 12px;
+}
+
+.accommodation-item:not(:nth-child(3n)) {
+  margin-right: 25px;
+}
+
+.accomodation-item-position {
+  padding: 35px 0px 40px 40px;
+  font-size: 16px;
+  line-height: 1;
+  color: #333333;
+}
+
+.accommodation-price {
+  display: inline;
+  margin-right: 35px;
+}
+
+.accommodation-price-color {
+  color: #969696;
+}
+
+.accommodation-price-bold {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.accommodation-name {
+  font-weight: 500;
+}
+
+.accommodation-city {
+  margin-bottom: 0;
+  color: #999999;
+}
+
+.accommodation-btn {
+  min-width: 100px;
+  min-height: 40px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cc9933;
+  border-radius: 12px;
+  color: #cc9933;
+  font-weight: 600;
+  padding: 13px 19px;
+}
+
+.accommodation-item-all-var {
+  width: 100%;
+  min-height: 449px;
+  background: url('/img/accommodation-all-var.png') no-repeat;
+  background-size: cover;
+  padding-top: 368px;
+}
+
+.accommodation-item-link {
+  background: url('/img/arrow-white.svg') no-repeat right center;
+  padding-left: 40px;
+  padding-right: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: #ffffff;
+}
