@@ -38,10 +38,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gold-project: #cc9933;
+  --white-project: #ffffff;
+  --grey-black-project: #333333;
+  --black-project: black;
+  --base-color: #f1f1f1;
+}
+
 body {
   margin: 0;
   font-family: 'Muller', sans-serif;
-  background-color: #f1f1f1;
+  background-color: var(--base-color);
 }
 
 a {
@@ -76,8 +84,28 @@ html {
   margin-left: 40px;
   font-size: 40px;
   line-height: 32px;
-  color: #333333;
+  color: var(--grey-black-project);
   font-weight: 400;
+}
+
+button {
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--gold-project);
+  color: var(--white-project);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.9);
 }
 
 /* Header */
@@ -107,7 +135,7 @@ html {
   align-items: center;
   margin-top: 30px;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background-color: var(--white-project);
   border-radius: 12px;
 }
 
@@ -118,12 +146,16 @@ html {
   color: #666666;
 }
 
+.header-phone-link:hover {
+  color: var(--gold-project);
+}
+
 .fa-arrow-circle-right {
-  color: #cc9933;
+  color: var(--gold-project);
 }
 
 .header-personal-account {
-  color: #cc9933;
+  color: var(--gold-project);
   font-size: 16px;
   line-height: 1;
 }
@@ -139,7 +171,11 @@ html {
 .header-nav-item-link {
   font-size: 16px;
   line-height: 32px;
-  color: #333333;
+  color: var(--grey-black-project);
+}
+
+.header-nav-item-link:hover {
+  color: var(--gold-project);
 }
 
 .header-search {
@@ -152,9 +188,10 @@ html {
   width: 100%;
   height: 100%;
   padding-left: 15px;
-  background-color: #f1f1f1;
+  background-color: var(--base-color);
   border-radius: 15px;
   border: none;
+  outline: none;
 }
 
 .header-search-button {
@@ -171,6 +208,14 @@ html {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.header-search-button:hover {
+  background-color: transparent;
+}
+
+.header-search-button:active {
+  transform: translateY(-40%);
 }
 
 /* Articles: quick-booking and special-offer */
@@ -196,6 +241,45 @@ html {
   margin-right: 55px;
 }
 
+.quick-booking__form {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  background-color: var(--white-project);
+  width: 518px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+
+.dropdown-content-svg {
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 90% 50%;
+  background-image: url('../img/arrow_grey_top.svg');
+}
+
+.dropdown-content a {
+  color: var(--gold-project);
+  padding: 30px 45px;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid var(--base-color);
+}
+
+.dropdown-content a:hover {
+  background-color: var(--base-color);
+}
+
+.quick-booking__form:hover .dropdown-content {
+  display: block;
+}
+
 .quick-booking-input {
   min-width: 515px;
   height: 70px;
@@ -204,6 +288,7 @@ html {
   border-radius: 12px;
   padding-left: 20px;
   font-size: 16px;
+  outline: none;
 }
 
 .quick-booking-link {
@@ -212,15 +297,24 @@ html {
   margin-right: 30px;
   border: none;
   border-radius: 12px;
-  background-color: #cc9933;
+  background-color: var(--gold-project);
   font-size: 16px;
   line-height: 32px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white-project);
+}
+
+.quick-booking-link:hover {
+  background-color: var(--white-project);
+  color: var(--gold-project);
 }
 
 .quick-booking-total-offers-link {
-  color: #cc9933;
+  color: var(--gold-project);
+}
+
+.quick-booking-total-offers-link:hover {
+  color: var(--black-project);
 }
 
 .background-special-offer {
@@ -238,7 +332,7 @@ html {
   font-size: 66px;
   line-height: 58px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--white-project);
 }
 
 .special-offer-price {
@@ -301,7 +395,7 @@ html {
   min-height: 325px;
   flex: 0 0 49%;
   margin-top: 25px;
-  background-color: #ffffff;
+  background-color: var(--white-project);
   border-radius: 12px;
 }
 
@@ -338,20 +432,32 @@ html {
 }
 
 .services-item-link {
-  background: url('/img/arrow.svg') no-repeat right;
+  display: inline-block;
   padding-left: 30px;
   padding-right: 20px;
   font-size: 22px;
   font-weight: 500;
   line-height: 1;
-  color: #cc9933;
+  color: var(--gold-project);
+}
+
+.services-item-link:hover {
+  color: var(--black-project);
+}
+
+.services-item-svg {
+  vertical-align: middle;
+}
+
+.services-item-link:hover .services-item-svg path {
+  stroke: var(--black-project);
 }
 
 .services-item-descriptions {
   padding-left: 30px;
   font-size: 16px;
   line-height: 32px;
-  color: #333333;
+  color: var(--grey-black-project);
   min-width: 425px;
   margin-bottom: 30px;
 }
@@ -375,7 +481,7 @@ html {
   min-height: 275px;
   flex: 0 0 23%;
   margin-top: 23px;
-  background-color: #ffffff;
+  background-color: var(--white-project);
   border-radius: 12px;
   padding: 44px 0px 0px 44px;
 }
@@ -388,7 +494,7 @@ html {
   max-width: 188px;
   font-size: 16px;
   line-height: 32px;
-  color: #333333;
+  color: var(--grey-black-project);
 }
 
 /* Accommodation */
@@ -411,7 +517,7 @@ html {
   margin-top: 25px;
   min-width: 373px;
   min-height: 440px;
-  background-color: #ffffff;
+  background-color: var(--white-project);
   border-radius: 12px;
 }
 
@@ -423,7 +529,7 @@ html {
   padding: 35px 0px 40px 40px;
   font-size: 16px;
   line-height: 1;
-  color: #333333;
+  color: var(--grey-black-project);
 }
 
 .accommodation-price {
@@ -453,20 +559,25 @@ html {
   min-width: 100px;
   min-height: 40px;
   margin-top: 20px;
-  background-color: #ffffff;
-  border: 1px solid #cc9933;
+  background-color: var(--white-project);
+  border: 1px solid var(--gold-project);
   border-radius: 12px;
-  color: #cc9933;
+  color: var(--gold-project);
   font-weight: 600;
   padding: 13px 19px;
 }
 
 .accommodation-item-all-var {
+  position: relative;
   width: 100%;
   min-height: 449px;
   background: url('/img/accommodation-all-var.png') no-repeat;
   background-size: cover;
   padding-top: 368px;
+}
+
+.accommodation-item-all-var:hover {
+  transform: translateY(+5px);
 }
 
 .accommodation-item-link {
@@ -476,7 +587,15 @@ html {
   font-size: 22px;
   font-weight: 500;
   line-height: 1;
-  color: #ffffff;
+  color: var(--white-project);
+}
+
+.accommodation-item-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
 
 /* Contact */
@@ -488,7 +607,7 @@ html {
 .contact-content {
   max-width: 472px;
   min-height: 617px;
-  background-color: #ffffff;
+  background-color: var(--white-project);
   border-radius: 12px;
 }
 
@@ -522,12 +641,12 @@ html {
 .contact-item-description {
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
+  color: var(--grey-black-project);
 }
 
 .contact-item-description-link {
   display: inline-block;
-  color: #cc9933;
+  color: var(--gold-project);
   margin-top: 10px;
 }
 
@@ -537,10 +656,10 @@ html {
 
 .btn-contact-route {
   margin: 0px 0px 45px 45px;
-  border: solid 1px #cc9933;
+  border: solid 1px var(--gold-project);
   border-radius: 12px;
-  background-color: #ffffff;
-  color: #cc9933;
+  background-color: var(--white-project);
+  color: var(--gold-project);
   font-weight: 600;
   min-width: 214px;
   min-height: 70px;
@@ -559,13 +678,14 @@ html {
 }
 
 .write-to-us-input {
-  border: solid 1px #ffffff;
+  border: solid 1px var(--white-project);
   border-radius: 12px;
   min-width: 340px;
   min-height: 70px;
   margin-bottom: 23px;
-  background-color: #ffffff;
+  background-color: var(--white-project);
   padding-left: 21px;
+  outline: none;
 }
 
 .write-to-us-form {
@@ -580,8 +700,13 @@ html {
 
 .write-to-us-input-button {
   padding-left: 0;
-  background-color: #cc9933;
-  color: #ffffff;
+  background-color: var(--gold-project);
+  color: var(--white-project);
+}
+
+.write-to-us-input-button:hover {
+  background-color: var(--white-project);
+  color: var(--gold-project);
 }
 
 /* footer */
@@ -591,7 +716,7 @@ html {
   margin-bottom: 52px;
   min-height: 338px;
   min-width: 1168px;
-  background-color: #333333;
+  background-color: var(--grey-black-project);
   border-radius: 12px;
   display: flex;
 }
@@ -605,13 +730,13 @@ html {
   font-size: 16px;
   line-height: 32px;
   margin-bottom: 30px;
-  color: #f1f1f1;
+  color: var(--base-color);
   display: flex;
   flex-direction: column;
 }
 
 .footer-item-link {
-  color: #cc9933;
+  color: var(--gold-project);
   line-height: 1.4;
 }
 
