@@ -241,45 +241,6 @@ button:active {
   margin-right: 55px;
 }
 
-.quick-booking__form {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 0;
-  background-color: var(--white-project);
-  width: 518px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-}
-
-.dropdown-content-svg {
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-position: 90% 50%;
-  background-image: url('../img/arrow_grey_top.svg');
-}
-
-.dropdown-content a {
-  color: var(--gold-project);
-  padding: 30px 45px;
-  font-size: 16px;
-  text-decoration: none;
-  display: block;
-  border-bottom: 1px solid var(--base-color);
-}
-
-.dropdown-content a:hover {
-  background-color: var(--base-color);
-}
-
-.quick-booking__form:hover .dropdown-content {
-  display: block;
-}
-
 .quick-booking-input {
   min-width: 515px;
   height: 70px;
@@ -577,7 +538,7 @@ button:active {
 }
 
 .accommodation-item-all-var:hover {
-  transform: translateY(+5px);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .accommodation-item-link {
